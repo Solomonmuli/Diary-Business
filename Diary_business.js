@@ -37,12 +37,13 @@ var year = 12
 incomeOverTime(45, 7);
 
 function incomeOverTime(selling_price, time) {
+  let weeklyAmount = week * total_Production * selling_price
+  let yearlyAmount = year * total_Production * selling_price  
   console.log("Your weekly income will be Ksh " + weeklyAmount)
   console.log("Your yearly income will be Ksh " + yearlyAmount)
+  
   Object.entries(months).forEach(([key, value]) => {
-  console.log(`Your income for ${key} is ${value}`)
+    console.log(`Your income for ${key} is ${value * selling_price * total_Production}`)
 });
-let weeklyAmount = week * total_Production * selling_price
-let yearlyAmount = year * total_Production * selling_price
 
 }
